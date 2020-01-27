@@ -6,7 +6,7 @@ class AlbumList extends React.Component {
   	const albums = this.props.albums;
     return (
     	<div>
-			<header className="songs"><h1>music songs</h1></header>
+			<header className="songs"><h1>Music Songs</h1></header>
 		    <div className="song-list-wrapper">
 		    	{albums.map((album, index) => (<Album key={index} album={album} />))}
 		    </div>
