@@ -21,9 +21,9 @@ class Filter extends React.Component {
 		this.setState({open: false});
 	}
 
-	openMenu(e) {
+	toggleMenu(e) {
 		e.preventDefault();
-		this.setState({open: true});
+		this.setState({open: !this.state.open});
 	}
 
 	render() {
@@ -35,7 +35,7 @@ class Filter extends React.Component {
 				</header>
 
 				<nav className="menu-filter">
-					<a href="#" onClick={(e) => { this.openMenu(e) }}>
+					<a href="#" onClick={(e) => { this.toggleMenu(e) }}>
 						MUSIC <span>{this.state.catSelected ? this.state.catSelected.name : 'All' }</span>
 					</a>
 					<ul className={this.state.open ? 'open' : ''}>
